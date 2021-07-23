@@ -1,0 +1,9 @@
+.question-input{
+    margin: 5px;
+}
+
+.form-label{
+    width: 100px;
+    display:inline-block;
+    text-align: right;
+}
