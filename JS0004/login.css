@@ -1,0 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1,300&display=swap'); */
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+   display: flex;
+   align-items: center; 
+   justify-content: center;
+
+   background-image: linear-gradient(to right top, #f5576c, #df4a83, #bf4895, #964ba0, #654ea3);
+   height: 100vh;
+}
+
+form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;    
+    padding: 35px 55px;
+
+    /* background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 150px 0px 150px 0px; */
+
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.0px );
+    -webkit-backdrop-filter: blur( 7.0px );
+    border-radius: 150px 0px 150px 0px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 35px;
+    color: rgb(121, 3, 91);
+}
+/* label{
+    display: block;
+    display: none;
+} */
+
+
+.wrapper {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+
+}
+input{
+    padding: 8px 20px;
+    background: transparent;
+    color: rgb(121, 3, 91);
+}
+
+small{
+    visibility: hidden;
+    color: red;
+    width: 100%;
+   
+}
+
+#gridCheck {
+    padding-left: 25px;
+}
+#username, #email, #password, #surname{   
+    padding: px;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid rgb(219, 186, 214);
+}
+
+p{
+    margin:0;
+    padding:0;
+    font-size: 14px;
+}
+
+input::-webkit-input-placeholder {
+    color: rgb(247, 10, 81) !important;    
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+  }
+  
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(204, 204, 204) !important;    
+  }
+  
+  input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(204, 204, 204) !important;    
+  }
+  
+  input:-ms-input-placeholder {
+    color: rgb(204, 204, 204) !important;    
+  }
+  .btn {
+    background-color: rgb(245, 39, 101);
+    border-color:rgb(245, 39, 101);
+    padding: 4px 22px;
+    align-self: left;
+}
+.checkbox{
+    padding-left: 40px;
+}
+
+.question{
+    font-weight: 600;
+  }
+  .answers {
+      margin-bottom: 20px;
+  }
+  #submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #297;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  #submit:hover{
+    background-color: #3a8;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+    <script defer src="login.js"></script>
+</head>
+<body>
+        <!-- action="/" method="GET" -->
+        
+        <form autocomplete="off" id="form">
+        <h1>Register to test</h1>    
+            <div class='wrapper'>
+                <div>
+                    <!-- <label for="username" class="">username</label> -->
+                    <input type="text" id="username" name="username" placeholder="username">
+                    <br>
+                    <small id="name-error">Write your username</small>
+                </div>
+
+                <div>
+                    <!-- <label for="username" class="">username</label> -->
+                    <input type="text" id="surname" name="surname" placeholder="surname">
+                    <br>
+                    <small id="surname-error">Write your surname</small>
+                </div>
+
+                <div>
+                    <!-- <label for="email" class="">e-mail</label> -->
+                    <input type="text" id="email" name="email" placeholder="write your email"> 
+                    <br>
+                    <small id="email-error">Write correct email</small>
+                </div>
+
+                <div>
+                    <!-- <label for="password" class="">password</label> -->
+                    <input type="password" id="password" name="password" placeholder="write your secret password">
+                    <br>
+                    <small id="password-error">password error</small>
+                </div>
+
+                <div>
+                    <div class='checkbox'>
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                           <p>I agree to terms and conditions</p>
+                        </label>
+                    </div>                    
+                    <small id="check-error">error message</small>
+                </div>
+
+                <br>
+                <button id='button' type='' class="btn">Login</button>
+            </div>            
+        </form>
+
+
+    
+</body>
+</html>
