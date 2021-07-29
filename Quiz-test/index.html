@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mains.css">
+</head>
+<body>
+  <h1>Quiz on Important Facts</h1>
+  <div class="quiz-container">
+    <div id="quiz"></div>
+  </div>
+  <button id="previous">Previous Question</button>
+  <button id="next">Next Question</button>
+  <button id="getScoresBtn">Get Scores</button>
+
+  <div id="results"></div>
+  <div id="grade"></div>
+
+  <form id='form' action="submitData.php" method="post">
+    <p>
+        <label class="form-label">Name</label>
+        <input type="text" name="name" id="firstName" required=true>
+    </p>
+    <p>
+        <label class="form-label">Surname</label>
+        <input type="text" name="surname" id="lastName" required=true>
+    </p>
+    <p>
+        <!-- <label class="form-label">Grade</label> -->
+        <input type="hidden" value=0 name="grade" id="hiddenGrade">
+    </p>
+    <button type='submit' id="submit">Submit Quiz</button>
+  </form>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
