@@ -75,15 +75,9 @@
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
     gradeContainer.innerHTML = `${grade}`;
     hiddenInput.value = `${grade}`;
-
     form.style.display = 'inline-block';
     nextButton.style.display = 'none';   
-    // getScoresBtn.style.display = 'inline-block';   
-
-
-  }
-
-  
+  }  
 
   function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
@@ -99,24 +93,12 @@
     if(currentSlide === slides.length-1){
       getScoresBtn.style.display = 'inline-block';  
       nextButton.style.display = 'none';
-      // showResults();
     }
     
     else{
-      // nextButton.style.display = 'inline-block';
       getScoresBtn.style.display = 'none';
-
-      // submitButton.style.display = 'none';
       form.style.display = 'none';
     }
-
-    // if(currentSlide === slides.length){
-    //   getScoresBtn.style.display = 'none';
-    //   form.style.display = 'inline-block;';
-
-    // }
-    
-    
   }
 
   function showNextSlide() {
@@ -165,47 +147,46 @@
       },
       correctAnswer: "d"
     },    
-    // {
-    //   question: 'How do you write "Hello World" in an alert box?',
-    //   answers: {
-    //     a: "alertBox('Hello World')",
-    //     b: "msg('Hello World')",
-    //     c: "msgBox('Hello World')",
-    //     d: "alert('Hello World')"
-    //   },
-    //   correctAnswer: "d"
-    // },
-    // {
-    //   question: 'JavaScript is a ___ -side programming language?',
-    //   answers: {
-    //     a: "client",
-    //     b: "server",
-    //     c: "both",
-    //     d: "none"
-    //   },
-    //   correctAnswer: "c"
-    // },
-    // {
-    //   question: 'How do you find the minimum of x and y using JavaScript?',
-    //   answers: {
-    //     a: "min(x,y)",
-    //     b: "Math.min(x,y)",
-    //     c: "Math.min(xy)",
-    //     d: "min(xy);"
-    //   },
-    //   correctAnswer: "b"
-    // },
-    // {
-    //   question: 'Which are the correct “if” statements to execute certain code if “x” is equal to 2?',
-    //   answers: {
-    //     a: "if(x 2)",
-    //     b: "if(x = 2)",
-    //     c: "if(x == 2)",
-    //     d: "if(x != 2 )"
-    //   },
-    //   correctAnswer: "c"
-    // }
-    
+    {
+      question: 'How do you write "Hello World" in an alert box?',
+      answers: {
+        a: "alertBox('Hello World')",
+        b: "msg('Hello World')",
+        c: "msgBox('Hello World')",
+        d: "alert('Hello World')"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: 'JavaScript is a ___ -side programming language?',
+      answers: {
+        a: "client",
+        b: "server",
+        c: "both",
+        d: "none"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: 'How do you find the minimum of x and y using JavaScript?',
+      answers: {
+        a: "min(x,y)",
+        b: "Math.min(x,y)",
+        c: "Math.min(xy)",
+        d: "min(xy);"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: 'Which are the correct “if” statements to execute certain code if “x” is equal to 2?',
+      answers: {
+        a: "if(x 2)",
+        b: "if(x = 2)",
+        c: "if(x == 2)",
+        d: "if(x != 2 )"
+      },
+      correctAnswer: "c"
+    }    
   ];
 
   // Kick things off
