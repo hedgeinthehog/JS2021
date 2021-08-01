@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+	<body>
+		<%- include('../partials/navigation'); %>
+
+		<ul class="student-list">
+			<% students.map(student => { %>
+				<li class="student-list-item"><a href="/students/<%= student.id_student %>" class="student-link"><%= student.name %> <%= student.surname %></a></li>
+			<% }) %>
+		</ul>
+	</body>
+</html>

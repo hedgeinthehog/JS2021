@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/navigation') %>
+
+    <form action="/students" method="POST" class="student-form">
+        <label>Name <input type="text" name="name" id="name" class="text-input"></label>
+        <label>Surname <input type="text" name="surname" id="surname" class="text-input"></label>
+        <label>Age <input type="number" name="age" id="age" class="text-input"></label>
+        <label>Gender:
+          <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+        </label>
+
+        <label>Faculty:
+          <select name="faculty" id="faculty">
+            <% faculties.map(faculty=> { %>
+              <option value="<%= faculty.id_faculty %>">
+                <%= faculty.name %>
+              </option>
+              <% }) %>
+          </select>
+        </label>
+        <button type="submit">Add Student</button>
+    </form>
+</body>
+
+</html>
