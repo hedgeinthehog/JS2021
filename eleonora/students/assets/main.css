@@ -1,0 +1,76 @@
+body {
+  margin: 20px;
+  background: #2e2e2e;
+  color: #ffffff;
+}
+
+a:hover {
+  color: rgb(16, 107, 77);
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  min-height: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link:not(:first-child) {
+  margin-left: 10px;
+}
+
+/* HOME */
+
+.home-content {
+  text-align: center;
+}
+
+/* STUDENT LIST */
+
+.student-link {
+  text-decoration: none;
+}
+
+.student-list-item:not(:first-child) {
+  margin-top: 4px;
+}
+
+/* STUDENT CREATE FORM */
+
+.student-form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  width: 240px;
+  margin: 0 auto;
+}
+
+.student-form label:not(:first-child){
+  margin-top: 10px;
+}
+
+.student-form button {
+  margin-top: 10px;
+}
+
+.text-input {
+  width: 100%;
+}
+
+/* ERROR */
+.error {
+  text-align: center;
+}
+
