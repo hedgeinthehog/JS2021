@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarClassExample</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="classes.js"></script>
+    <!-- <script src="script.js"></script> -->
+</head>
+<body onload="">
+    <h1> CARS</h1>
+    <h2>excercise with classes</h2>
+    <div class="cars-wrapper">
+        <div class="images-container">
+            <div class="car image">
+                <img onmouseover="showData(this)" id='one' src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+            </div>                    
+            <div class="car image">
+                <img onmouseover="showData(this)" id='two' src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+            </div>
+                        
+            <div class="car image">
+                <img onmouseover="showData(this)" id='three' src="https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            </div>
+                        
+            <div class="car image">
+                <img onmouseover="showData(this)" id='four' src="https://images.unsplash.com/photo-1463462927315-fb10af2c68d8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhciUyMGplZXAlMjByYW5nZSUyMHJvdmVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            </div>
+                        
+        </div>
+    </div>
+    <div class="list-info-container">
+        <ul>
+            <li><b>Mark:</b> <span id="make"></span></li>
+            <li><b>Model:</b> <span id="model"></span></li>
+            <li><b>Year: </b><span id="year"></span></li>
+            <li><b>Color:</b> <span id="color"></span></li>
+            <li><b>Engine:</b> <span id="engineType"></span></li>
+            <li id='odometerId'><b>Odometer:</b><span id="odometer"></span></li>
+        </ul>
+    </div>       
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
