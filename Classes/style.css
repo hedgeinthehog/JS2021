@@ -11,9 +11,10 @@ h1, h2 {
     text-align: center;
 }
 
-.car-wrapper, .images-container{
+.images-container{
     display: flex;
     justify-content: center;
+    flex-wrap:wrap;
 }
 
 .car{

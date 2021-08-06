@@ -14,23 +14,19 @@ function showData(pic){
 
         case "two":                
             LoadCarData(car2);
-            car2.getDetails();
             document.getElementById("odometerId").hidden=false;
-            document.getElementById("odometer").innerHTML= car2.ododmeter, car2.isUsed();  
-            // console.log(car2.ododmeter);
+            document.getElementById("odometer").innerHTML=car2.isUsed();
             break;   
 
         case "three":                
             LoadCarData(car3);
             car3.getDetails();
-
             break;   
 
         case "four":                
             LoadCarData(car4);
             CarFour.getDetails(car4);
             break;  
-
 
         default:
             console.log('DEFAULTTTTTTT')   

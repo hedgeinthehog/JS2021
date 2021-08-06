@@ -17,14 +17,17 @@ class CarTwo extends Car {
             this.odometer = odometer
     }
 
+    getDetails(){            
+        return this;
+       } 
 
-    isUsed(odometer){
-        if (odometer > 2000){
-            return ododmeter;
-        }else {
-            return odometer;
+    isUsed(){
+        if (this.odometer  > 2000){
+            return this.odometer + "(Used)";
+         }else {
+            return  'new'
         }
-    }        
+       }        
 }
 
 
