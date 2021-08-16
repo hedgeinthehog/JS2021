@@ -1,0 +1,30 @@
+body {
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+}
+
+.block-left {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+}
+
+.block-right {
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+}
+
+.content {
+    padding: 20px;
+}
+
+.nav {
+    padding: 10px;
+}
+

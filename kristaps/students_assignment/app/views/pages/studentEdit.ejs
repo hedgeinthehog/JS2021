@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <%- include("../partials/head") %>
+
+    <body>
+
+        <%- include("../partials/navigation") %>
+
+        <form action="/students/edit" method="POST">
+            <div>
+                <label class="block-left">Name</label>
+                <input class="block-right" name="name" value="<%= student.name %>" />
+            </div>
+            <br>
+            <div>
+                <label class="block-left">Surname</label>
+                <input class="block-right" name="surname" value="<%= student.surname %>"/>
+            </div>
+            <br>
+            <div>
+                <label class="block-left">Age</label>
+                <input class="block-right" name="age" type="number" value="<%= student.age %>" />
+            </div>
+            <br>
+            <div>
+                <label class="block-left">Gender</label>
+                <select class="block-right" name="gender">
+                    <option value="Male" <%= student.gender=='Male' ? 'selected' : '' %> >Male</option>
+                    <option value="Female" <%= student.gender=='Female' ? 'selected' : '' %> >Female</option>
+                </select>
+            </div>
+            <br>
+
+            <input type="hidden" name="id" value="<%= student.id %>" />
+            <button type="submit" >Submit</button>
+        
+        </form>
+        </form>
+    </body>
+
+</html>

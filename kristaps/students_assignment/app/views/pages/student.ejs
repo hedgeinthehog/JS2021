@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include("../partials/head") %>
+
+<body>
+
+    <h1>Anout <%= student.name %></h1>
+    <%- include("../partials/navigation") %>
+
+    <p>
+        <label class="block-left">Full name: </label>
+        <label class="block-right"><%= student.getFullName() %></label>
+    </p>
+    <p>
+        <label class="block-left">Age: </label>
+        <label class="block-right"><%= student.age %></label>
+    </p>
+    <p>
+        <label class="block-left">Gender: </label>
+        <label class="block-right"><%= student.gender %></label>
+    </p>
+
+    <button onclick="location.href='/students/edit/<%= student.id %>'">Edit</button>
+    <button onclick="location.href='/students/delete/<%= student.id %>'">Delete</button>
+
+</body>
+
+</html>

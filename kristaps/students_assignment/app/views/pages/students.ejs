@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include("../partials/head") %>
+
+<body>
+    <h1>List of Students</h1>
+    <%- include("../partials/navigation") %>
+
+    <div class="content">
+        <% students.map(student => { %>
+            <a href="/students/<%= student.id %>"><%= student.getFullName() %></a><br>
+        <% }) %>
+    </div>
+    <button onclick="location.href='/students/edit'">Add Student</button>
+
+</body>
+
+</html>
