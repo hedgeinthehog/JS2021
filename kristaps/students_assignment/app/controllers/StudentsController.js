@@ -9,7 +9,6 @@ class StudentsController {
 
         if (studentId) {
             const student = await studentsRepository.getStudentById(studentId);
-            console.log(student)
             if (student) {
                 res.render("pages/student", { student });
             } 
@@ -32,7 +31,6 @@ class StudentsController {
         if (!student){
            student = new Student({}) 
         }
-        console.log(student)
         res.render("pages/studentEdit", {student})
     }
 

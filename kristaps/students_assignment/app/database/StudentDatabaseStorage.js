@@ -1,4 +1,3 @@
-const { resume } = require("./dbConnection")
 const connection = require("./dbConnection")
 
 class StudentDatabaseStorage {
@@ -21,8 +20,8 @@ class StudentDatabaseStorage {
 
     async getById(id) {
         try {
-            const [result] = await connection.promise().query(
-                `SELECT * FROM ${this.tableName} WHERE id=${id}`
+            const [result] = await connection.promise().execute(
+                `SELECT * FROM ${this.tableName} WHERE id=?`, [id]
                 )
             // console.log(result)
             return result[0]
@@ -34,11 +33,14 @@ class StudentDatabaseStorage {
 
     async create(data) {
         try {
-            await connection.promise().query(
+            const [result] =await connection.promise().execute(
                 `INSERT INTO ${this.tableName}
                 (name, surname, age, gender) 
-                VALUES ('${data.name}', '${data.surname}', '${data.age}', '${data.gender}');
-                `)
+                VALUES (?, ?, ?, ?);`,
+                [data.name, data.surname, data.age, data.gender]
+                )
+            // console.log(result)
+            return result.insertId
         }
         catch (error) {
             console.log(error)
@@ -47,10 +49,11 @@ class StudentDatabaseStorage {
 
     async update(data) {
         try {
-            await connection.promise().query(
+            const [result] = await connection.promise().execute(
                 `UPDATE ${this.tableName}
-                SET name='${data.name}', surname='${data.surname}', age='${data.age}', gender='${data.gender}'
-                WHERE id=${data.id}`
+                SET name=?, surname=?, age=?, gender=?
+                WHERE id=${data.id}`,
+                [data.name, data.surname, data.age, data.gender]
                 )
         }
         catch (error) {
@@ -60,9 +63,10 @@ class StudentDatabaseStorage {
 
     async delete(id) {
         try {
-            await connection.promise().query(
+            await connection.promise().execute(
                 `DELETE FROM ${this.tableName}
-                WHERE id=${id}`
+                WHERE id=?`,
+                [id]
                 )
         }
         catch (error) {
